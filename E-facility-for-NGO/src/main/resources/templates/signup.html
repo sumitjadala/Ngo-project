@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+<body>
+
+	<div class="container">
+		<img class="center" width="300px" src="img/logo1.png">
+		<h1>Sign up</h1>
+
+		<div class="form-form">
+
+			<form action="#" th:action="@{/registration}" th:object="${user}" method="post">
+				<table>
+					<tr>
+						<th>First Name :</th>
+							<td><input type="text" th:field="*{firstName}" /></td>
+					</tr>
+					<tr>
+						<th>Last Name :</th>
+							<td><input type="text" th:field="*{lastName}" /></td>
+					</tr>
+					<tr>
+						<th>Email :</th>
+							<td><input type="text" th:field="*{email}" /></td>
+					</tr>
+					<tr>
+						<th>Confirm Email :</th>
+							<td><input type="text" th:field="*{confirmEmail}" /></td>
+					</tr>
+					<tr>
+						<th>Password :</th>
+						<td><input type="password" th:field="*{password}" required="required" /></td>
+					</tr>
+					<tr>
+						<th>Confirm Password :</th>
+						<td><input type="password" th:field="*{confirmPassword}" required="required" /></td>
+					</tr>
+					<tr>
+						<td colspan="2"><button class="btn" type="submit" name="login">Login</button></td>
+					</tr>
+					<tr>
+						<td colspan="2">Registered user? <a href="/login">Login</a></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
